@@ -1,52 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>  
   <Choose>
-    <!-- 
-     | netstandard
-     -->
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
-      <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
-      <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
-      <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
-      <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
-      <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
-      <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
-      <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-      </ItemGroup>
-    </When>
-
     <!-- netcoreapp -->
     <When Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
       <ItemGroup>
@@ -84,43 +38,85 @@
       </ItemGroup>
     </When>
 
-    <!-- 
-     | netframework 
-     -->
+    <!-- netstandard -->
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+      <ItemGroup>
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+      <ItemGroup>
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+      <ItemGroup>
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
+      <ItemGroup>
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+      <ItemGroup>
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+      <ItemGroup>
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+      <ItemGroup>
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <!-- netframework -->
     <When Condition=" '$(TargetFramework)' == 'net461' ">
       <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="6.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="6.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'net46' ">
       <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'net46' ">
       <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'net452' ">
       <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'net451' ">
       <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'net45' ">
       <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="5.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'net403' ">
@@ -151,8 +147,8 @@
 
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Collections.Immutable" Version="1.2" Condition=" '$(OutputType)' == 'Library' " />
-        <PackageReference Update="System.Collections.Immutable" Version="7.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="7.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Collections.Immutable" Version="1.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>
