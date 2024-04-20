@@ -13,6 +13,7 @@
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Resources.ResourceManager.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Runtime.CompilerServices.Unsafe.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Runtime.Serialization.Primitives.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Text.RegularExpressions.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Threading.Thread.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Xml.XDocument.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Xml.XmlDocument.targets" />
