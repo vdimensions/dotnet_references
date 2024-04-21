@@ -38,6 +38,7 @@
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/kajabity.tools/Kajabity.Tools.Java.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/log4net.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/MySqlConnector.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/Newtonsoft.Json.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/Npgsql.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/nunit/NUnit.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/nunit/NUnit3TestAdapter.targets" />

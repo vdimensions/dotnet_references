@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
-    <!-- 
-     | netstandard
-     -->
+    <!-- netstandard -->
     <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
       <ItemGroup>
         <PackageReference Update="YamlDotNet" Version="11.2.1" Condition=" '$(OutputType)' != 'Library' " />
@@ -29,9 +27,7 @@
       </ItemGroup>
     </When>
 
-    <!-- 
-     | netcoreapp
-     -->
+    <!-- netcoreapp -->
      <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
       <ItemGroup>
         <PackageReference Update="YamlDotNet" Version="11.2.1" Condition=" '$(OutputType)' != 'Library' " />
@@ -45,9 +41,7 @@
       </ItemGroup>
     </When>
 
-    <!-- 
-     | netframewrrk
-     -->
+    <!-- netframework -->
     <When Condition=" '$(TargetFramework)' == 'net20' ">
       <ItemGroup>
         <PackageReference Update="YamlDotNet" Version="8.1.2" Condition=" '$(OutputType)' != 'Library' " />
